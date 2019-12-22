@@ -15,5 +15,14 @@ link_directories(${LLVM_LIBRARY_DIRS})
 
 set(CMAKE_CXX_STANDARD 14)
 
+set(CMAKE_MODULE_PATH
+        ${CMAKE_MODULE_PATH}
+        "${CMAKE_CURRENT_SOURCE_DIR}/cmake"
+        "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
+        )
+
 add_subdirectory(skeleton)  # Use your pass name here.
 add_subdirectory(test)  # Use your pass name here.
+add_subdirectory(joy)  # Use your pass name here.
+
+#add_custom_target(order DEPENDS SkeletonPass test)
