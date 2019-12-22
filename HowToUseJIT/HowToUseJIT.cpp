@@ -7,6 +7,7 @@
 #include "llvm/ExecutionEngine/ExecutionEngine.h"
 #include "llvm/ExecutionEngine/GenericValue.h"
 #include "llvm/ExecutionEngine/MCJIT.h"
+#include "llvm/Support/ManagedStatic.h"
 #include <iostream>
 
 using namespace llvm;
@@ -59,6 +60,10 @@ int main() {
     FuncType barFunc = (FuncType) barAddr;
 
     std::cout << barFunc() << std::endl;
+
+    delete ee;
+    llvm_shutdown();
+
     return 0;
 }
 

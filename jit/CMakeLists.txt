@@ -1,13 +1,16 @@
 
 set(LLVM_LINK_COMPONENTS
         Core
-        OrcJIT
+        ExecutionEngine
+        Interpreter
         Support
         nativecodegen
+        MCJIT
+        OrcJIT
         )
 
 
 
 include(AddLLVM)
 
-add_llvm_executable(jit ch3_toy.cpp)
+add_llvm_executable(jit main.cpp)
