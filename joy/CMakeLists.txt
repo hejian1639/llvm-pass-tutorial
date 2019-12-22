@@ -7,4 +7,4 @@ set(LLVM_LINK_COMPONENTS
 
 include(AddLLVM)
 
-add_llvm_example(joy ch2_toy.cpp)
+add_llvm_executable(joy ch2_toy.cpp)

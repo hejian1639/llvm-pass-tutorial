@@ -1,11 +1,5 @@
 cmake_minimum_required(VERSION 3.4)
 
-# we need LLVM_HOME in order not automatically set LLVM_DIR
-#if(NOT DEFINED ENV{LLVM_HOME})
-#    message(FATAL_ERROR "$LLVM_HOME is not defined")
-#else ()
-#    set(ENV{LLVM_DIR} $ENV{LLVM_HOME}/lib/cmake/llvm)
-#endif()
 
 
 find_package(LLVM REQUIRED CONFIG)
@@ -24,5 +18,7 @@ set(CMAKE_MODULE_PATH
 add_subdirectory(skeleton)  # Use your pass name here.
 add_subdirectory(test)  # Use your pass name here.
 add_subdirectory(joy)  # Use your pass name here.
+add_subdirectory(jit)  # Use your pass name here.
+add_subdirectory(HowToUseJIT)  # Use your pass name here.
+add_subdirectory(HowToUseLLJIT)  # Use your pass name here.
 
-#add_custom_target(order DEPENDS SkeletonPass test)

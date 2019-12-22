@@ -407,11 +407,6 @@ static void Driver() {
     }
 }
 
-extern "C"
-double putchard(double X) {
-    putchar((char) X);
-    return 0;
-}
 
 int main(int argc, char *argv[]) {
     LLVMContext &Context = TheContext;
